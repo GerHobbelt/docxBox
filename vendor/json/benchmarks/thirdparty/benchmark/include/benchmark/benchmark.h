@@ -243,11 +243,11 @@ BENCHMARK(BM_test)->Unit(benchmark::kMillisecond);
 namespace benchmark {
 class BenchmarkReporter;
 
-void Initialize(int* argc, char** argv);
+void Initialize(int* argc, const char** argv);
 
 // Report to stdout all arguments in 'argv' as unrecognized except the first.
 // Returns true there is at least on unrecognized argument (i.e. 'argc' > 1).
-bool ReportUnrecognizedArguments(int argc, char** argv);
+bool ReportUnrecognizedArguments(int argc, const char** argv);
 
 // Generate a list of benchmarks matching the specified --benchmark_filter flag
 // and if --benchmark_list_tests is specified return after printing the name
